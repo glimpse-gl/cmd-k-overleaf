@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h2 class="settings-title">Cmd+K Overleaf</h2>
+        
+        <form class="settings-form" id="settingsForm">
+            <div class="form-group">
+                <label for="provider">Provider:</label>
+                <select id="provider" name="provider" class="form-select">
+                    <option value="openai">OpenAI</option>
+                    <option value="openrouter">OpenRouter</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <div class="label-with-help">
+                    <label for="modelName">Model Name:</label>
+                    <button type="button" class="help-icon" id="modelHelp" title="Show model examples">
+                        <span>?</span>
+                    </button>
+                </div>
+                <input type="text" id="modelName" name="modelName" class="form-input" 
+                       placeholder="e.g., gpt-4o, gpt-4-turbo" required>
+                <div class="model-help-popup" id="modelHelpPopup" style="display: none;">
+                    <div class="help-popup-content">
+                        <h4>Example names:</h4>
+                        <ul id="modelExamples">
+                        </ul>
+                        <a id="modelDocsLink" href="https://platform.openai.com/docs/models" target="_blank">
+                            View all models →
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="apiKey">API Key:</label>
+                <input type="password" id="apiKey" name="apiKey" class="form-input" 
+                       placeholder="Enter your API key" required>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Save Configuration</button>
+                <button type="button" id="testBtn" class="btn-secondary">Test Connection</button>
+            </div>
+        </form>
+        
+        <div id="status" class="status-message" style="display: none;"></div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html> 

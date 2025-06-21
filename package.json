@@ -1,0 +1,41 @@
+{
+  "name": "cmd-k-overleaf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode development",
+    "clean": "rm -rf dist/*"
+  },
+  "keywords": ["chrome-extension", "overleaf", "latex", "ai", "command-palette"],
+  "author": "",
+  "license": "ISC",
+  "description": "AI-powered command palette for Overleaf LaTeX editor",
+  "devDependencies": {
+    "@codemirror/search": "^6.5.11",
+    "@types/chrome": "^0.0.319",
+    "codemirror": "^6.0.1",
+    "copy-webpack-plugin": "^13.0.0",
+    "dotenv": "^16.5.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "undici-types": "^7.8.0",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "dependencies": {
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.36.8",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "diff": "^8.0.2",
+    "interactjs": "^1.10.27",
+    "moveable": "^0.53.0",
+    "openai": "^4.102.0",
+    "process": "^0.11.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
